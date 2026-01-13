@@ -221,13 +221,13 @@
                 <i class="fab fa-tiktok"></i>
                 <i class="fab fa-instagram"></i>
             </div>
-            Powered by Render & Netlify | Unlimited
+            Powered by Yousave Engine | Unlimited
         </div>
     </div>
 
     <script>
-        // ✅ আপনার Render API লিংকটি এখানে বসানো হয়েছে ✅
-        const API_BASE = "https://final-op47.onrender.com"; 
+        // ✅ আপনার নতুন এবং সঠিক লিংকটি এখানে বসানো হয়েছে ✅
+        const API_BASE = "https://final1-138v.onrender.com"; 
 
         async function startDownload() {
             const url = document.getElementById('urlInput').value.trim();
@@ -246,13 +246,13 @@
 
             // UI Loading State
             loader.style.display = 'block';
-            msg.innerText = "Connecting to server (First request may take 30s)...";
+            msg.innerText = "Connecting to server...";
             msg.className = "msg";
             btn.style.opacity = "0.7";
             btn.style.pointerEvents = "none";
 
             try {
-                // Call your Render API
+                // Call your Updated Render API
                 const response = await fetch(`${API_BASE}/api/engine`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -281,7 +281,7 @@
 
             } catch (error) {
                 console.error(error);
-                msg.innerText = "Server is waking up from sleep. Try again in 10 seconds!";
+                msg.innerText = "Connecting... Please wait (Server waking up).";
                 msg.className = "msg";
             } finally {
                 loader.style.display = 'none';
@@ -290,6 +290,7 @@
             }
         }
 
+        // অডিও সিলেক্ট করলে কোয়ালিটি অপশন লুকানোর জন্য
         function toggleQuality() {
             const format = document.getElementById('format').value;
             const quality = document.getElementById('quality');
@@ -303,4 +304,4 @@
         }
     </script>
 </body>
-  </html>
+                    </html>
